@@ -54,18 +54,18 @@ You can define as you like.
 
 <?php
 
-require_once("class.naptor.php");
+- require_once("class.naptor.php");
 
 
-$naptor = new phpnaptor();
+- $naptor = new phpnaptor();
 
-$naptor->start("Rezero"); //add new service application name
+- $naptor->start("Rezero"); //add new service application name
 
-$naptor->write(0, "Rezero begin to extracting files 1002235/82931874 ");  //state id =0 and information state
+- $naptor->write(0, "Rezero begin to extracting files 1002235/82931874 ");  //state id =0 and information state
 
 
 
-$naptor->write(2, "Rezero autocrawling fail "); 
+- $naptor->write(2, "Rezero autocrawling fail "); 
 
 ?>
 
