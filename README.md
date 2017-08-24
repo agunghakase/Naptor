@@ -1,7 +1,7 @@
 # Naptor
 Naptor is Nagios Application Monitor, for help you monitoring your backend application process. You can use this application only on same server (your application and nagios server must be in same server). To remote monitoring under developing.
 
-You can embed naptor to your application at folder class, after installing you add class, like (php, c, c++, etc) still need help to develop.
+You can embed naptor to your application at folder class, after installing you add class, like (php, c, c++, etc still need help to develop for other programming language)
 
 #
 # Preview
