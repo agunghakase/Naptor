@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+
+
+#Edit this is Configuration files for NAPTOR
+
+#Nagios Path
+NAGIOSDIR=/opt/nagios/              # Change to your nagios application path
+#Your Naptor Path
+NAPTORPATH=/opt/naptor/             # Change to your naptor package path
+
+#UBUNTU NAGIOS EXEC
+#You must specify nagios daemon to start and stop with command
+#nagios start, nagios stop, cant using nagios -d nagios.cfg
+NAGIOSEXEC=/etc/init.d/nagios       
+NAGIOSLIB=$NAGIOSDIR"main/libexec/"
+
+
+
+
+
+
+
+
+#------------------------------------------------------------------------------
+#DONT EDIT THIS CONFIGURATION BELLOW
+NAPTORVER="1.0.0"
+#This configuration let be default with Nagios Core 4.3
+NAGIOSBIN=$NAGIOSDIR"main/bin/"
+NAGIOSCFG=$NAGIOSDIR"main/etc/nagios.cfg"
+NAPTORCFG=$NAGIOSDIR"main/etc/naptorcfg/"
+NAPTORSVC=$NAPTORCFG"svc.cfg"
+SERVICETMP=$NAPTORCFG"svc.tmp"
+#Log file for NAPTOR
+NAPTORLOG=/var/log/naptor/
+
