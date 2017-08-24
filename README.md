@@ -11,7 +11,7 @@ Via web, you can check at http://localhost/nagiosmain. The service name begin wi
 
 
 #
-# HOW TO INSTALL NAPTOR APPLICATION
+# HOW TO INSTALL
 
 1. You must installed Nagios core first.
 2. After installing nagios, extract the naptor file and then edit the config files. 
