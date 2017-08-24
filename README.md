@@ -50,8 +50,6 @@ You can embed naptor to your application at folder class, after installing you a
    
    s : state id (Nagios state id 0: ok, 1: Warning, 2: Critical)
    
-You can define as you like.
-
 
 
 2. Using class inside class folder, for example when using php:
