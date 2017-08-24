@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+
+
+#Edit this is Configuration files for NAPTOR
+
+#Nagios Path
+NAGIOSDIR=/opt/nagios/
+
+#UBUNTU NAGIOS EXEC
+NAGIOSEXEC=/etc/init.d/nagios
+NAGIOSLIB=$NAGIOSDIR"main/libexec/"
+
+
+
+
+
+
+
+
+#------------------------------------------------------------------------------
+#DONT EDIT THIS CONFIGURATION BELLOW
+
+#This configuration let be default with Nagios Core 4.3
+NAGIOSBIN=$NAGIOSDIR"main/bin/"
+NAGIOSCFG=$NAGIOSDIR"main/etc/nagios.cfg"
+NAPTORCFG=$NAGIOSDIR"main/etc/naptorcfg/"
+NAPTORSVC=$NAPTORCFG"svc.cfg"
+SERVICETMP=$NAPTORCFG"svc.tmp"
+
+#Log file for NAPTOR
+NAPTORLOG=/var/log/naptor/
+

@@ -1,0 +1,58 @@
+#!/bin/bash
+
+
+#Load config
+APPPATH=`dirname $0`
+
+. $APPPATH"/config"
+
+
+
+#Auto scan naptor application log 
+sfile=`ls -1 $NAPTORLOG | sed -e 's/\..*$//'`
+
+#Create looping from sfile
+
+declare -a arr=($sfile)
+sService="\n"
+for i in "${arr[@]}"
+do
+#Create some service string for nagios cfg
+
+
+   sService=$sService"define service{ \n"
+   sService=$sService"use                             local-service \n"
+   sService=$sService"host_name                       localhost \n"
+   sService=$sService"service_description             NAP-${i^^} \n"
+   sService=$sService"check_command			naptor!$i \n"
+   sService=$sService"notifications_enabled		0 \n"
+        
+   sService=$sService"} \n\n"  
+
+done
+
+
+   # existing cfg files
+   exService=`cat $NAPTORSVC | md5sum`
+   # write new cfg file as temp
+   echo -e $sService > $SERVICETMP
+   
+   nService=`cat $SERVICETMP | md5sum`
+   
+   #removing temp
+   rm $SERVICETMP
+
+#if there is new application, then write new config
+#Command config is different  (Not Works)
+
+if [ "$nService" != "$exService" ]; then
+   #write out to naptorcfg
+   echo -e $sService > $NAPTORSVC
+   #restart Nagios
+   $NAGIOSEXEC restart
+fi
+
+
+
+
+
