@@ -52,8 +52,6 @@ You can define as you like.
 
 2. Using class inside class folder, for example when using php:
 
-<?php
-
 - require_once("class.naptor.php");
 
 
@@ -66,8 +64,6 @@ You can define as you like.
 
 
 - $naptor->write(2, "Rezero autocrawling fail "); 
-
-?>
 
 
 
