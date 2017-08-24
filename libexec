@@ -1,0 +1,56 @@
+#!/bin/bash
+
+APPPATH=`dirname $0`
+
+. $APPPATH"/config"
+
+NAPTORLOG=/var/log/naptor/
+#read log from application name
+#naptor can read
+#logstate, logapp, logdate, loginfo
+
+appname=$1".log"
+slog=`tail -1 "$NAPTORLOG"$appname`
+eval $slog;
+
+
+#Check logstate 0, 1, 2
+if test $logstate==0;then
+  cmdok="OK"
+elif test $logstate==1;then
+  cmdok="WARNING"
+else
+  cmdok="CRITICAL"
+fi
+
+#print Human Date Format
+dt=`date -d @${logdate} '+%H:%M -%d %b %Y'`
+
+#check time different more then 1 hour is idle
+#Create linux timestamp and count date diff
+timenow=`date +%s`
+timediff=`expr $timenow - $logdate` 
+
+#Time diff
+timemin=`expr $timediff / 60`   #Exact Minutes /60 seconds
+
+#if time > 60 seconds, then status cmdok=idle, and dt become $ ago
+
+if [ $timemin -gt 60 ] ; then  #if time minutes diff greater then 60 minutes
+   cmdok="IDLE"; #dt="Last proccess > 1 hours ago"
+   if [ $logstate -ne 2 ]; then logstate=1; fi    #if not CRITICAL change to IDLE
+fi
+
+
+monit="${logapp^^} $cmdok - $loginfo ($dt)"
+
+echo "$monit"
+
+#scan first if new , restart nagios
+. $APPPATH"/scan"
+
+
+#Write Application state  0 = ok, 1=warning, 2=error 
+exit $logstate;
+
+
