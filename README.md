@@ -6,7 +6,7 @@ You can embed naptor to your application at folder class, after installing you a
 
 
 
-***HOW TO INSTALL NAPTOR APPLICATION
+# HOW TO INSTALL NAPTOR APPLICATION
 
 1. You must installed Nagios core first.
 2. After installing nagios, extract the naptor file and then edit the config files. 
@@ -33,7 +33,7 @@ You can embed naptor to your application at folder class, after installing you a
    - For uninstalling application
    ./clean.sh
 
-***HOW TO USE
+# HOW TO USE
 1. Using Terminal/Console, you can point your application to exec naptor
 
    naptor -a "AppName" -i "Info state" -s [stateid]
