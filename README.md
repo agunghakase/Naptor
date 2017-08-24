@@ -5,20 +5,23 @@ You can embed naptor to your application at folder class, after installing you a
 
 
 
-
+#
 # HOW TO INSTALL NAPTOR APPLICATION
 
 1. You must installed Nagios core first.
 2. After installing nagios, extract the naptor file and then edit the config files. 
 
-   #Nagios Path
-   NAGIOSDIR=/opt/nagios/                  <---- change to your nagios dir
+   - #Nagios Path
+   - NAGIOSDIR=/opt/nagios/                  <---- change to your nagios dir
 
-   #TESTED USING UBUNTU NAGIOS
-   NAGIOSEXEC=/etc/init.d/nagios           <---- Change to your nagios exec
+   - #Nagios exec (on ubuntu server)
+   - NAGIOSEXEC=/etc/init.d/nagios           <---- Change to your nagios exec
    
-   to make sure your nagios exec run normaly, using terminal and type:
-    /etc/init.d/nagios status
+   - #Your naptor path
+   - NAPTORPATH=/opt/naptor/                 <---- Change to your naptor package path
+   
+   To make sure your nagios exec run normaly, using terminal and type:
+   /etc/init.d/nagios status
 
    if nagios status is started, then you can start to install.
    if not, start nagios daemon first.
@@ -32,7 +35,8 @@ You can embed naptor to your application at folder class, after installing you a
 
    - For uninstalling application
    ./clean.sh
-
+ 
+#
 # HOW TO USE
 1. Using Terminal/Console, you can point your application to exec naptor
 
@@ -66,14 +70,10 @@ You can define as you like.
 - $naptor->write(2, "Rezero autocrawling fail "); 
 
 
+#
 
 
-
- After you add naptor to your application, you can check via web to monitoring your application state
-
- Using browser  http://localhost/nagiosmain/  and then select Services in left menu.
-   
- New application service will be added at your nagios service list.
+ After you add naptor to your application, you can check via web to monitoring your application state using browser  http://localhost/nagiosmain/  and then select Services in left menu.  New application service will be added at your nagios service list.
 
 
    
