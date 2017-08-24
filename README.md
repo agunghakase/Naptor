@@ -3,7 +3,9 @@ Naptor is Nagios Application Monitor, for help you monitoring your backend appli
 
 You can embed naptor to your application at folder class, after installing you add class, like (php, c, c++, etc) still need help to develop.
 
+# Preview
 
+![alt text](http://belajarc.com/apps/nap.png)
 
 #
 # HOW TO INSTALL NAPTOR APPLICATION
