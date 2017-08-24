@@ -17,20 +17,20 @@ Naptor is Nagios Application Monitor, for help you monitoring your backend appli
    
    to make sure your nagios exec, using terminal and type:
  
-   # /etc/init.d/nagios status
+   /etc/init.d/nagios status
 
    if nagios status is started, then you can start to install.
    if not, start nagios daemon first
 
-   # /etc/init.d/nagios start
+   /etc/init.d/nagios start
 
 3. After your configuration without problem, you can execute with root previledge 
 
    - Change file permission first
-   # chmod 755 naptor.sh scan config clean.sh
+   chmod 755 naptor.sh scan config clean.sh
    - Installing application
-   # ./install.sh
+   ./install.sh
 
    - For uninstalling application
-   # ./clean.sh
+   ./clean.sh
 
