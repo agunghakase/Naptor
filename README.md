@@ -75,9 +75,14 @@ Via web, you can check at http://localhost/nagiosmain. The service name begin wi
 
 #
 
-
  After you add naptor to your application, you can check via web to monitoring your application state using browser  http://localhost/nagiosmain/  and then select Services in left menu.  New application service will be added at your nagios service list.
 
+#
+# Donation
+
+If this project help you reduce time to develop, you can give me a cup of coffee.
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](agunghakase@gmail.com)
 
    
    
